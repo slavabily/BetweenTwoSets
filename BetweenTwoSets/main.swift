@@ -7,5 +7,10 @@
 
 import Foundation
 
-print("Hello, World!")
+func getTotalX(a: [Int], b: [Int]) -> Int {
+    // Write your code here
+    return 2
+}
+
+print(getTotalX(a: [2,6], b: [24,35]))
 
