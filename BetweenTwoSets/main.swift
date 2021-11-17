@@ -23,7 +23,19 @@ func getTotalX(a: [Int], b: [Int]) -> Int {
         } 
     }
     print(bA)
-    return 0
+    var a1 = [Int]()
+    for i in 0..<bA.count {
+        for j in 0..<a.count {
+            if bA[i] % a[j] == 0 {
+                a1.append(bA[i])
+            }
+        }
+    }
+    print(a1)
+    let dupl = Array(Set(a1.filter({ i in
+        a1.filter({$0 == i}).count > 1})))
+    print(dupl)
+    return dupl.count
 }
 
 print(getTotalX(a: [2,6], b: [24,36]))
